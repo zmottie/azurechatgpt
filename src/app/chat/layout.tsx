@@ -3,8 +3,8 @@ import { ChatMenu } from "@/features/chat/chat-menu/chat-menu";
 import { MainMenu } from "@/features/menu/menu";
 
 export const metadata = {
-  title: "AzureChatGPT",
-  description: "AzureChatGPT",
+  title: "Option 4.0 - ChatGPT",
+  description: "Private ChatGPT instance dedicated to Option 4.0 employees",
 };
 
 export default async function RootLayout({
