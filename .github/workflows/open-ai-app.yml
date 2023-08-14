@@ -180,6 +180,16 @@ jobs:
                 "name": "AZURE_DOCUMENT_INTELLIGENCE_KEY",
                 "value": "${{ secrets.AZURE_DOCUMENT_INTELLIGENCE_KEY }}",
                 "slotSetting": false
+              },
+              {
+                "name": "AZURE_COSMOSDB_DB_NAME",
+                "value": "${{ secrets.AZURE_COSMOSDB_DB_NAME }}",
+                "slotSetting": false
+              },
+              {
+                "name": "AZURE_COSMOSDB_CONTAINER_NAME",
+                "value": "${{ secrets.AZURE_COSMOSDB_CONTAINER_NAME }}",
+                "slotSetting": false
               }
             ]
 
