@@ -76,8 +76,106 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: ${{ secrets.AZURE_APP_SERVICE_NAME }}
+          app-name: ${{ vars.AZURE_APP_SERVICE_NAME }}
           package: ${{ github.workspace }}/Nextjs-site.zip
+          app-settings-json: |
+          [
+              {
+                  "name": "AZURE_AD_CLIENT_ID",
+                  "value": "${{ vars.AZURE_AD_CLIENT_ID }}",
+                  "slotSetting": false
+              },
+              {
+                  "name": "AZURE_AD_TENANT_ID",
+                  "value": "${{ vars.AZURE_AD_TENANT_ID }}",
+                  "slotSetting": false
+              },
+              {
+                  "name": "AZURE_APP_SERVICE_NAME",
+                  "value": "${{ vars.AZURE_APP_SERVICE_NAME }}",
+                  "slotSetting": false
+              },
+              {
+                  "name": "AZURE_COSMOSDB_URI",
+                  "value": "${{ vars.AZURE_COSMOSDB_URI }}",
+                  "slotSetting": false
+              },
+              {
+                  "name": "AZURE_OPENAI_API_DEPLOYMENT_NAME",
+                  "value": "${{ vars.AZURE_OPENAI_API_DEPLOYMENT_NAME }}",
+                  "slotSetting": false
+              },
+              {
+                  "name": "AZURE_OPENAI_API_INSTANCE_NAME",
+                  "value": "${{ vars.AZURE_OPENAI_API_INSTANCE_NAME }}",
+                  "slotSetting": false
+              },
+              {
+                  "name": "AZURE_OPENAI_API_VERSION",
+                  "value": "${{ vars.AZURE_OPENAI_API_VERSION }}",
+                  "slotSetting": false
+              },
+              {
+                  "name": "NEXTAUTH_URL",
+                  "value": "${{ vars.NEXTAUTH_URL }}",
+                  "slotSetting": false
+              },              
+              {
+                  "name": "AZURE_OPENAI_API_EMBEDDINGS_DEPLOYMENT_NAME",
+                  "value": "${{ vars.AZURE_OPENAI_API_EMBEDDINGS_DEPLOYMENT_NAME }}",
+                  "slotSetting": false
+              },              
+              {
+                  "name": "AZURE_SEARCH_NAME",
+                  "value": "${{ vars.AZURE_SEARCH_NAME }}",
+                  "slotSetting": false
+              },              
+              {
+                  "name": "AZURE_SEARCH_INDEX_NAME",
+                  "value": "${{ vars.AZURE_SEARCH_INDEX_NAME }}",
+                  "slotSetting": false
+              },              
+              {
+                  "name": "AZURE_SEARCH_API_VERSION",
+                  "value": "${{ vars.AZURE_SEARCH_API_VERSION }}",
+                  "slotSetting": false
+              },              
+              {
+                  "name": "AZURE_DOCUMENT_INTELLIGENCE_ENDPOINT",
+                  "value": "${{ vars.AZURE_DOCUMENT_INTELLIGENCE_ENDPOINT }}",
+                  "slotSetting": false
+              },
+              {
+                  "name": "AZURE_OPENAI_API_KEY",
+                  "value": "${{ secrets.AZURE_OPENAI_API_KEY }}",
+                  "slotSetting": false
+              },
+              {
+                  "name": "AZURE_AD_CLIENT_SECRET",
+                  "value": "${{ secrets.AZURE_AD_CLIENT_SECRET }}",
+                  "slotSetting": false
+              },
+              {
+                  "name": "NEXTAUTH_SECRET",
+                  "value": "${{ secrets.NEXTAUTH_SECRET }}",
+                  "slotSetting": false
+              },
+              {
+                  "name": "AZURE_COSMOSDB_KEY",
+                  "value": "${{ secrets.AZURE_COSMOSDB_KEY }}",
+                  "slotSetting": false
+              },
+              {
+                  "name": "AZURE_SEARCH_API_KEY",
+                  "value": "${{ secrets.AZURE_SEARCH_API_KEY }}",
+                  "slotSetting": false
+              },
+              {
+                  "name": "AZURE_DOCUMENT_INTELLIGENCE_KEY",
+                  "value": "${{ secrets.AZURE_DOCUMENT_INTELLIGENCE_KEY }}",
+                  "slotSetting": false
+              },
+          ]
 
       - name: 🧹 Cleanup
         run: rm ${{ github.workspace }}/Nextjs-site.zip
