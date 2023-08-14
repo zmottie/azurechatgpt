@@ -9,8 +9,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: AI_NAME,
-  description: AI_NAME,
+  title: "Option 4.0 - ChatGPT",
+  description: "Private ChatGPT instance dedicated to Option 4.0 employees",
 };
 
 export default function RootLayout({

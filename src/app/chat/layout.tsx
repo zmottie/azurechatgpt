@@ -4,8 +4,8 @@ import { MainMenu } from "@/features/menu/menu";
 import { AI_NAME } from "@/features/theme/customise";
 
 export const metadata = {
-  title: AI_NAME,
-  description: AI_NAME,
+  title: "Option 4.0 - ChatGPT",
+  description: "Private ChatGPT instance dedicated to Option 4.0 employees",
 };
 
 export default async function RootLayout({
