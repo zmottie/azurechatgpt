@@ -78,6 +78,12 @@ jobs:
         with:
           app-name: ${{ vars.AZURE_APP_SERVICE_NAME }}
           package: ${{ github.workspace }}/Nextjs-site.zip
+
+      - name: 🛠️ Configures Azure Web App settings
+        id: configure-webapp
+        uses: azure/appservice-settings@v1
+        with:
+          app-name: ${{ vars.AZURE_APP_SERVICE_NAME }}
           app-settings-json: |
             [
               {
