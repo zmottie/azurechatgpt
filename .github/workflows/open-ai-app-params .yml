@@ -1,4 +1,4 @@
-name: Set Web App Configuration params
+name: Set web app configuration params
 
 on:
   # Allow manual workflow trigger
