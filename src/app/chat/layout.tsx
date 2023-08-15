@@ -4,7 +4,7 @@ import { MainMenu } from "@/features/menu/menu";
 import { AI_NAME } from "@/features/theme/customise";
 
 export const metadata = {
-  title: "Option 4.0 - ChatGPT",
+  title: AI_NAME,
   description: "Private ChatGPT instance dedicated to Option 4.0 employees",
 };
 
