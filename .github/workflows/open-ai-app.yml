@@ -183,7 +183,7 @@ jobs:
               },
               {
                 "name": "AZURE_COSMOSDB_DB_NAME",
-                "value": "${{ secrets.AZURE_COSMOSDB_DB_NAME }}",
+                "value": "${{ vars.AZURE_COSMOSDB_DB_NAME }}",
                 "slotSetting": false
               },
               {
